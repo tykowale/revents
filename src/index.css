@@ -17,6 +17,7 @@ body {
     width: 100%;
 }
 
+
 /*home page styles*/
 
 .masthead {
@@ -57,6 +58,9 @@ body {
 .secondary.inverted.pointing.menu {
     border: none;
 }
+.ui.segments:last-child {
+    margin-bottom: 1em;
+}
 
 /*end home page styles*/
 
@@ -89,11 +93,11 @@ body {
     margin-left: 0.5em;
 }
 
-.ui.menu .item > img:not(.ui) {
+.ui.menu .item>img:not(.ui) {
     margin-right: 1.5em !important;
 }
 
-.ui.menu:not(.vertical) .item > .button {
+.ui.menu:not(.vertical) .item>.button {
     margin-left: 0.5em;
 }
 
