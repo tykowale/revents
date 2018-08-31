@@ -56,29 +56,16 @@ const events = [
 
 class EventDashboard extends Component {
 
-  constructor(props) {
-    super(props);
+  state = {
+    events: events,
+    isOpen: false,
+  };
 
-    this.state = {
-      events: events,
-      isOpen: false,
-    };
-
-    this.handleFormOpen = this.handleFormOpen.bind(this);
-    this.handleCancel = this.handleCancel.bind(this);
-  }
-
-  handleFormOpen() {
+  handleFormClick = (isOpen) => () => {
     this.setState({
-      isOpen: true,
+      isOpen: isOpen,
     });
-  }
-
-  handleCancel() {
-    this.setState({
-      isOpen: false,
-    });
-  }
+  };
 
   render() {
     return (
@@ -88,9 +75,9 @@ class EventDashboard extends Component {
         </Grid.Column>
 
         <Grid.Column width={6}>
-          <Button onClick={this.handleFormOpen} positive content="Create Event"/>
+          <Button onClick={this.handleFormClick(true)} positive content="Create Event"/>
           {this.state.isOpen &&
-          <EventForm handleCancel={this.handleCancel}/>}
+          <EventForm handleCancel={this.handleFormClick(false)}/>}
         </Grid.Column>
       </Grid>
     );
