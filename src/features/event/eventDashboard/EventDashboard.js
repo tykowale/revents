@@ -19,14 +19,14 @@ const events = [
       {
         id: "a",
         name: "Bob",
-        photoURL: "https://randomuser.me/api/portraits/men/20.jpg",
+        photoURL: "https://randomuser.me/api/portraits/men/20.jpg"
       },
       {
         id: "b",
         name: "Tom",
-        photoURL: "https://randomuser.me/api/portraits/men/22.jpg",
-      },
-    ],
+        photoURL: "https://randomuser.me/api/portraits/men/22.jpg"
+      }
+    ]
   },
   {
     id: "2",
@@ -43,27 +43,27 @@ const events = [
       {
         id: "b",
         name: "Tom",
-        photoURL: "https://randomuser.me/api/portraits/men/22.jpg",
+        photoURL: "https://randomuser.me/api/portraits/men/22.jpg"
       },
       {
         id: "a",
         name: "Bob",
-        photoURL: "https://randomuser.me/api/portraits/men/20.jpg",
-      },
-    ],
-  },
+        photoURL: "https://randomuser.me/api/portraits/men/20.jpg"
+      }
+    ]
+  }
 ];
 
 class EventDashboard extends Component {
 
   state = {
     events: events,
-    isOpen: false,
+    isOpen: false
   };
 
   handleFormClick = (isOpen) => () => {
     this.setState({
-      isOpen: isOpen,
+      isOpen: isOpen
     });
   };
 
