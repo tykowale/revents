@@ -15,7 +15,7 @@ class EventForm extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(this.state.event);
+    this.props.createEvent(this.state.event);
   };
 
   onInputChange = (event) => {
@@ -28,7 +28,7 @@ class EventForm extends Component {
   };
 
   render() {
-    const { handleCancel } = this.props;
+    const { handleCancel, handleCreateEvent } = this.props;
     const { event } = this.state;
 
     return (
