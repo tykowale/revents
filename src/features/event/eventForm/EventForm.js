@@ -12,7 +12,7 @@ const emptyEvent = {
 class EventForm extends Component {
 
   state = {
-    event: emptyEvent
+    event: Object.assign({}, emptyEvent)
   };
 
   componentDidMount() {
@@ -26,7 +26,7 @@ class EventForm extends Component {
   componentWillReceiveProps(nextProps) {
     if (nextProps.selectedEvent !== this.props.selectedEvent) {
       this.setState({
-        event: nextProps.selectedEvent || emptyEvent
+        event: nextProps.selectedEvent || Object.assign({}, emptyEvent)
       });
     }
   }
@@ -39,6 +39,8 @@ class EventForm extends Component {
     } else {
       this.props.createEvent(this.state.event);
     }
+
+
   };
 
   onInputChange = (event) => {
