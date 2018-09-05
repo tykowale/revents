@@ -28,7 +28,7 @@ class EventForm extends Component {
   };
 
   render() {
-    const { handleCancel, handleCreateEvent } = this.props;
+    const { handleCancel } = this.props;
     const { event } = this.state;
 
     return (
