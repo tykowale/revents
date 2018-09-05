@@ -19,7 +19,15 @@ class EventForm extends Component {
     if (this.props.selectedEvent !== null) {
       this.setState({
         event: this.props.selectedEvent
-      })
+      });
+    }
+  }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.selectedEvent !== this.props.selectedEvent) {
+      this.setState({
+        event: nextProps.selectedEvent || emptyEvent
+      });
     }
   }
 
