@@ -13,7 +13,8 @@ function render() {
     <BrowserRouter>
       <App/>
     </BrowserRouter>,
-    rootEl);
+    rootEl
+  );
 }
 
 if (module.hot) {
