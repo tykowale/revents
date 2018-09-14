@@ -1,13 +1,13 @@
-import { INCREAMENT_COUNTER, DECREMENET_COUNTER } from "./testConstants";
+import { INCREMENT_COUNTER, DECREMENT_COUNTER } from "./testConstants";
 
 export const incrementCounter = () => {
   return {
-    type: INCREAMENT_COUNTER
+    type: INCREMENT_COUNTER
   };
 };
 
-export const DECREMENT_COUNTER = () => {
+export const decrementCounter = () => {
   return {
-    type: DECREMENET_COUNTER
+    type: DECREMENT_COUNTER
   };
 };

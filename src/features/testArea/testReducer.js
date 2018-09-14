@@ -1,4 +1,4 @@
-import { DECREMENET_COUNTER, INCREAMENT_COUNTER } from "./testConstants";
+import { INCREMENT_COUNTER, DECREMENT_COUNTER } from "./testConstants";
 
 const initialSate = {
   data: 34
@@ -6,9 +6,9 @@ const initialSate = {
 
 const testReducer = (state = initialSate, action) => {
   switch (action.type) {
-    case INCREAMENT_COUNTER:
+    case INCREMENT_COUNTER:
       return { ...state, data: state.data + 1 };
-    case DECREMENET_COUNTER:
+    case DECREMENT_COUNTER:
       return { ...state, data: state.data - 1 };
     default:
       return state;
