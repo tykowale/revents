@@ -53,13 +53,14 @@ const initialState = [
 ];
 
 export const createEvent = (state, payload) => {
-  return [...state, Object.assign({}, payload)];
+  return [...state, Object.assign({}, payload.event)];
 };
 
 export const updateEvent = (state, payload) => {
+  console.log(payload);
   return [
     ...state.filter(event => event.id !== payload.event.id),
-    Object.assign({}, payload)
+    Object.assign({}, payload.event)
   ];
 };
 
