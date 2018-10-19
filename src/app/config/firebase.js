@@ -3,7 +3,7 @@ import "firebase/firestore";
 import config from "../../config";
 
 const firebaseConfig = {
-    googleApiKey: config.googleApiKey,
+    apiKey: config.firebaseApiKey,
     authDomain: config.authDomain,
     databaseURL: config.databaseURL,
     projectId: config.projectId,
