@@ -11,7 +11,12 @@ const firebaseConfig = {
     messagingSenderId: config.messagingSenderId
 };
 
+const settings = {
+    timestampsInSnapshots: true
+};
+
 firebase.initializeApp(firebaseConfig);
-firebase.firestore();
+const firestore = firebase.firestore();
+firestore.settings(settings);
 
 export default firebase;
